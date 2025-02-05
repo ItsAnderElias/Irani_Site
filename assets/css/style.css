@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #d6d3d3; /* Cor principal */
+    --secondary-color: #e3d344; /* Cor secundária */
+}
+html {
+    scroll-behavior: smooth; /* Transição suave para a navegação */
+}
+/* Estilos principais do site */
+body {
+    font-family: "Merriweather", serif;
+    font-weight: 500;
+    font-style: normal;
+    background: url('../img/BG-G.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #d6d3d3;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+@media (max-width: 1000px) {
+    body {
+        max-width: 100vw;
+        background: url('../img/BG-G.png') repeat;
+    }
+}
+
+header {
+    background: rgba(50, 49, 49, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5px 0px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height: 5%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+@media (max-width: 1000px) {
+    header {
+        width: 100vw;
+    }
+}
+
+
+section {
+    height: 100vh;
+    width: 100%;
+    transition: opacity 1s ease;
+    margin-top: 6%; /* Garante que o conteúdo comece abaixo do menu fixo */
+}
+@media (max-width: 1000px) {
+    section {
+        width: 100vw;
+        overflow: hidden;
+    }
+}
+
+.logo {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    transition: all 3s ease-in;
+}
+
+.home-bt {
+    height: 30px;
+}
+
+.home-bt:hover {
+    opacity: 1;
+    content: url('../img/Buttons-G/Home-2.png');
+}
+
+.about-bt {
+    height: 30px;
+}
+
+.about-bt:hover {
+    opacity: 1;
+    content: url('../img/Buttons-G/About-2.png');
+}
+
+.contact-bt {
+    height: 30px;
+}
+
+.contact-bt:hover {
+    opacity: 1;
+    content: url('../img/Buttons-G/Contact-2.png');
+}
+ 
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#home .album-title {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-height: 700px) {
+    #home .album-title {
+        width: 50%;
+    }
+}
+
+#home .album-title h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 1000;
+    font-style: normal;
+    transform: scale(2);
+    align-self: center;
+}
+
+/* Container principal do álbum */
+#home .album-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Para centralizar o conteúdo */
+    overflow: hidden;
+}
+
+/* Estilo para cada foto */
+#home .photo {
+    width: calc(25% - 15px);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo das imagens dentro do álbum */
+#home .photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Efeito de hover nas imagens */
+#home .photo img:hover {
+    opacity: 0.5;
+    transform: scale(1.05); /* Aumenta a imagem levemente ao passar o mouse */
+}
+
+#home .foto1:hover {
+    content: url(../img/Fotos-G/Foto1-Desc.png);
+}
+#home .foto2:hover {
+    content: url(../img/Fotos-G/Foto2-Desc.png);
+}
+#home .foto3:hover {
+    content: url(../img/Fotos-G/Foto3-Desc.png);
+}
+#home .foto4:hover {
+    content: url(../img/Fotos-G/Foto4-Desc.png);
+}
+#home .foto5:hover {
+    content: url(../img/Fotos-G/Foto5-Desc.png);
+}
+#home .foto6:hover {
+    content: url(../img/Fotos-G/Foto6-Desc.png);
+}
+#home .foto7:hover {
+    content: url(../img/Fotos-G/Foto7-Desc.png);
+}
+#home .foto8:hover {
+    content: url(../img/Fotos-G/Foto8-Desc.png);
+}
+
+/* Responsividade: 2 fotos por linha em telas menores */
+@media (max-width: 1000px) {
+    #home .photo {
+        width: calc(50% - 15px); /* Duas fotos por linha */
+    }
+}
+
+#home .slogan {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s ease-in;
+}
+@media (max-width: 1000px) {
+    #home .slogan {
+        display: none;
+    }
+}
+
+
+#home .slogan:hover {
+    transform: scale(1.2);
+}
+
+#home .slogan h1 {
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-weight: 1200;
+    font-size: 150%;
+    transform: scale(1.6);
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-right: 15px;
+}
+@media (max-width: 1000px) {
+    #about {
+        overflow: scroll;
+        max-width: 100vh;
+        padding: 1%;
+    }
+}
+
+#about .history {
+    display: flex;
+}
+@media (max-width: 1000px) {
+    #about .history {
+        flex-direction: column;
+    }
+    #about .history .icon {
+        display: none;
+    }
+}
+
+#about .history .icon {
+    transition: 0.5s ease-in-out;
+}
+
+#about .history .icon:hover {
+    transform: scale(1.1);
+    content: url(../img/icons-P/history2.png);
+}
+
+#about .vmv {
+    display: flex;
+    gap: 15px;
+}
+#about .vmv h1 {
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in-out;
+}
+#about .vmv h1:hover {
+    transform: scale(1.6);
+}
+@media (max-width: 1000px) {
+    #about .vmv {
+        flex-direction: column;
+    }
+}
+
+#about .icon {
+    display: flex;
+    align-items: center;
+}
+
+#about .vision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 3%;
+}
+#about .vision h1 {
+    text-align: center;
+}
+#about .vision img:hover {
+    transform: scale(1.1);
+    content: url(../img/icons-P/vision2.png);
+}
+
+#about .mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about .mission h1 {
+    text-align: center;
+}
+#about .mission img:hover {
+    transform: scale(1.1);
+    content: url(../img/icons-P/mission2.png);
+}
+
+#about .values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 3%;
+}
+#about .values h1 {
+    text-align: center;
+}
+#about .values img:hover {
+    transform: scale(1.1);
+    content: url(../img/icons-P/values2.png);
+}
+
+#contact {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
