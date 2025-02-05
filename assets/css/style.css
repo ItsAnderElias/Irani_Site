@@ -66,6 +66,11 @@ section {
         overflow: hidden;
     }
 }
+@supports (-webkit-touch-callout: none) {
+    section {
+        min-height: 100vh;
+    }
+}
 
 .logo {
     height: 40px;
