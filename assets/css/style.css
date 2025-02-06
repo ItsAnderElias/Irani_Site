@@ -147,8 +147,19 @@ nav ul li a {
     font-family: "Merriweather", serif;
     font-weight: 1000;
     font-style: normal;
-    transform: scale(2);
+    transform: scale(5);
+    margin-bottom: 6%;
     align-self: center;
+}
+@media (max-width: 1000px) {
+    #home .album-title h1 {
+        transform: scale(2);
+        padding-bottom: 15%;
+        margin-bottom: 0%;
+    }
+    #home .album-title {
+        width: 65%;
+    }
 }
 
 /* Container principal do álbum */
