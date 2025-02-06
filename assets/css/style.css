@@ -4,6 +4,12 @@
     --primary-color: #d6d3d3; /* Cor principal */
     --secondary-color: #e3d344; /* Cor secundária */
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 html {
     scroll-behavior: smooth; /* Transição suave para a navegação */
 }
@@ -332,9 +338,104 @@ nav ul li a {
 }
 
 #contact {
-    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+
+#contact .title {
+    padding-bottom: 1%;
+    transform: scale(3);
+}
+
+#contact .contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+#contact .contacts .whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .contacts .instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .contacts h2 {
+    transform: scale(1.5);
+}
+#contact img {
+    scale: 0.5;
+    transition: 0.5s;
+}
+#contact .instagram-img:hover {
+    content: url(../img/icons-P/Instagram2.png);
+}
+#contact .wpp-img:hover {
+    content: url(../img/icons-P/whatsapp2.png);
+}
+#contact .adress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+#contact .adress h1 {
+    transform: scale(2);
+}
+@media (max-width: 1000px) { 
+    #contact {
+        display: flex;
+        justify-items: auto;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    #contact .title {
+        transform: scale(1.5);
+        padding-top: 6%;
+    }
+    
+    #contact .contacts {
+        gap: 0%;
+    }
+    
+    #contact .contacts .whatsapp {
+        flex-direction: column;
+    }
+    #contact .contacts .instagram {
+        flex-direction: column;
+    }
+    #contact .contacts h2 {
+        transform: scale(0.8);
+    }
+    #contact img {
+        max-width: 50px;
+    }
+    #contact .adress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 2%;
+    }
+    #contact .adress h1 {
+        transform: scale(1);
+    }
+    #contact .map {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+}
 footer {
     background: #333;
     color: white;
