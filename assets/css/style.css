@@ -48,8 +48,8 @@ header {
     padding: 5px 5px 0px 0px;
     position: fixed;
     top: 0;
-    width: 100%;
-    max-height: 5%;
+    width: 100vw;
+    max-height: 5vh;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -62,13 +62,10 @@ header {
 
 section {
     height: 100vh;
-    width: 100%;
-    transition: opacity 1s ease;
-    margin-top: 6%; /* Garante que o conteúdo comece abaixo do menu fixo */
+    width: 100vw;
 }
 @media (max-width: 1000px) {
     section {
-        width: 100vw;
         overflow: hidden;
     }
 }
@@ -79,7 +76,7 @@ section {
 }
 
 .logo {
-    height: 40px;
+    height: 30px;
 }
 
 nav ul {
@@ -127,7 +124,7 @@ nav ul li a {
 #home {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #home .album-title {
@@ -135,7 +132,6 @@ nav ul li a {
     width: 50%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 @media (max-height: 700px) {
     #home .album-title {
@@ -143,22 +139,31 @@ nav ul li a {
     }
 }
 
-#home .album-title h1 {
-    font-family: "Merriweather", serif;
-    font-weight: 1000;
-    font-style: normal;
-    transform: scale(5);
-    margin-bottom: 6%;
-    align-self: center;
+#home .album-title .name {
+    height: 20%;
 }
+#home .album-title .name img {
+    height: 70%;
+}
+
 @media (max-width: 1000px) {
     #home .album-title h1 {
         transform: scale(2);
-        padding-bottom: 15%;
+        padding-bottom: 10%;
         margin-bottom: 0%;
     }
     #home .album-title {
-        width: 65%;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+    #home .album-title .name {
+        height: 20%;
+        max-width: 100%;
+    }
+    #home .album-title .name img {
+        height: 70%;
+        max-width: 100%;
     }
 }
 
@@ -226,9 +231,13 @@ nav ul li a {
 }
 
 #home .slogan {
+    width: 50%;
     display: flex;
     flex-direction: column;
     transition: transform 0.6s ease-in;
+}
+#home .slogan img {
+    width: 65%;
 }
 @media (max-width: 1000px) {
     #home .slogan {
@@ -245,31 +254,41 @@ nav ul li a {
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     font-weight: 1200;
-    font-size: 150%;
+    font-size: 120%;
     transform: scale(1.6);
 }
 
 #about {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-top: 2%;
-    padding-right: 15px;
-}
-@media (max-width: 1000px) {
-    #about {
-        overflow: scroll;
-        max-width: 100vh;
-        padding: 1%;
-    }
+    width: 100vw;
+    max-height: 100vh;
+    overflow: scroll;
 }
 
 #about .history {
     display: flex;
+    height: 30%;
+    width: 100%;
+    overflow: scroll;
 }
 @media (max-width: 1000px) {
+    #about {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5%;
+        width: 100vw;
+        max-height: fit-content;
+        overflow: scroll;
+    }
     #about .history {
         flex-direction: column;
+        height: auto;
+        padding: 1% 0% 0% 1%;
+    }
+    #about .history h2 {
+        font-size: 80%;
     }
     #about .history .icon {
         display: none;
@@ -280,17 +299,15 @@ nav ul li a {
     transition: 0.5s ease-in-out;
 }
 
-#about .history .icon:hover {
-    transform: scale(1.1);
-    content: url(../img/icons-P/history2.png);
-}
-
 #about .vmv {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    padding: 1% 0% 6% 1%;
+    height: 60%;
+    text-align: center;
+    overflow: scroll;
 }
 #about .vmv h1 {
-    transform: scale(1.5);
     transition: transform 0.5s ease-in-out;
 }
 #about .vmv h1:hover {
@@ -298,10 +315,19 @@ nav ul li a {
 }
 @media (max-width: 1000px) {
     #about .vmv {
+        display: flex;
         flex-direction: column;
+        padding: 1% 0% 6% 1%;
+        height: auto;
+        text-align: center;
+        overflow: auto;
     }
 }
 
+#about .vmv img {
+    width: 20%;
+    padding-right: 5%;
+}
 #about .icon {
     display: flex;
     align-items: center;
@@ -311,7 +337,6 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 3%;
 }
 #about .vision h1 {
     text-align: center;
@@ -338,10 +363,11 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 3%;
+    width: 100%;
 }
 #about .values h1 {
     text-align: center;
+    overflow: scroll;
 }
 #about .values img:hover {
     transform: scale(1.1);
@@ -397,6 +423,7 @@ nav ul li a {
     justify-content: center;
     flex-direction: column;
     margin-top: 2%;
+    max-width: 50%;
 }
 #contact .adress h1 {
     transform: scale(2);
