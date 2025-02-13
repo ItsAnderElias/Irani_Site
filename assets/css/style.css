@@ -148,7 +148,8 @@ nav ul li a {
 
 @media (max-width: 1000px) {
     #home .album-title {
-        width: 70%;
+        width: 50%;
+        max-height: 100%;
         align-items: center;
         justify-content: center;
     }
