@@ -74,6 +74,31 @@ section {
         min-height: 100vh;
     }
 }
+.preload {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.preload::after {
+    content: "";
+    background: url('../img/Buttons-G/About-2.png') no-repeat, 
+                url('../img/Buttons-G/Home-2.png') no-repeat, 
+                url('../img/Buttons-G/Contact-2.png') no-repeat, 
+                url('../img/Fotos-G/Foto1-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto2-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto3-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto4-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto5-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto6-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto7-Desc.png') no-repeat, 
+                url('../img/Fotos-G/Foto8-Desc.png') no-repeat;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
 
 .logo {
     height: 30px;
